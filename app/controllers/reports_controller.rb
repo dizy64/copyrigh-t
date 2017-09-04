@@ -16,6 +16,7 @@ class ReportsController < ApplicationController
       redirect_to root_path
     else
       flash[:error] = '신고가 접수되지 않았습니다. URL을 다시 확인해주세요.'
+      @total_count = Report.all.count
       render :index
     end
 
