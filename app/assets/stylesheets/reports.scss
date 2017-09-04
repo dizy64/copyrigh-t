@@ -1,3 +1,42 @@
-// Place all the styles related to the reports controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.modal-content {
+  background-color: #fff;
+  color: #000;
+  text-shadow: none;
+}
+
+.report-notice {
+  font-weight: 200;
+  font-size: 0.8rem;
+  margin: 0 10px;
+}
+
+p.counter {
+  font-weight: 200;
+  font-size: 0.8rem;
+  span.count {
+    font-weight: 400;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 40em) {
+  p.counter {
+    font-size: 1.1rem;
+    span.count {
+      font-weight: 400;
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@media (min-width: 62em) {
+  p.counter {
+    font-size: 1.2rem;
+    span.count {
+      font-weight: 400;
+      font-size: 1.4rem;
+    }
+  }
+}
