@@ -1,0 +1,32 @@
+<% if flash[:success].present? %>
+<div class="alert alert-success" role="alert">
+  <%= flash[:success] %>
+</div>
+<% end %>
+<% if flash[:error].present? %>
+<div class="alert alert-danger" role="alert">
+  <%= flash[:error] %>
+</div>
+<% end %>
+<div class="inner cover">
+  <h1 class="cover-heading">T 저작권 지킴이</h1>
+  <p class="lead">
+    이 페이지는 팬들이 자발적으로 운영하는 사이트입니다.<br/>
+    롯데카드 무브 : 사운드트랙 vol.2 「서태지25」 이후,<br/>
+    저작권 위반이 무분별하게 이루어지고 있어서<br/>
+    이를 수집하고 집계하여<br/>
+    서태지컴퍼니측에 전달하기 위해 운영되는 사이트입니다.<br/>
+    <br/>
+    실제 법률적 검토는 서태지컴퍼니 측에서 하게 될 예정입니다.
+  </p>
+  <p class="lead">
+    <button type="button" class="btn btn-lg btn-secondary" data-toggle="modal" data-target="#reportModal">신고하기</button>
+  </p>
+  <% if @total_count > 0 %>
+  <p class="counter">
+    현재 <span class="count"><%= @total_count %>건</span>의 신고가 접수되었습니다.
+  </p>
+  <% end %>
+</div>
+
+<%= render 'form' %>

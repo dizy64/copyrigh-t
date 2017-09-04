@@ -1,0 +1,2 @@
+class Imformer < ApplicationRecord
+end
