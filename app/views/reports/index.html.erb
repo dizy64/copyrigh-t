@@ -1,3 +1,13 @@
+<% if flash[:success].present? %>
+<div class="alert alert-success" role="alert">
+  <%= flash[:success] %>
+</div>
+<% end %>
+<% if flash[:error].present? %>
+<div class="alert alert-danger" role="alert">
+  <%= flash[:error] %>
+</div>
+<% end %>
 <div class="inner cover">
   <h1 class="cover-heading">T 저작권 지킴이</h1>
   <p class="lead">

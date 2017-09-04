@@ -15,7 +15,8 @@ class ReportsController < ApplicationController
       flash[:success] = '정상적으로 신고되었습니다.'
       redirect_to root_path
     else
-      redirect_to status: 500
+      flash[:error] = '신고가 접수되지 않았습니다. URL을 다시 확인해주세요.'
+      render :index
     end
 
   end
