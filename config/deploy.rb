@@ -4,6 +4,7 @@ lock "3.9.0"
 # Change these
 server 'copyright.withtaiji.com', roles: [:web, :app, :db], primary: true
 
+set :rbenv_ruby,      '2.4.1'
 set :repo_url,        'git@github.com:dizy64/copyrigh-t.git'
 set :application,     'copyright'
 set :user,            'zero'
