@@ -60,6 +60,8 @@ group :development do
   gem 'capistrano-rbenv'
   gem 'capistrano-bundler'
   gem 'capistrano3-puma'
+  gem 'capistrano-dotenv-tasks', require: false
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
