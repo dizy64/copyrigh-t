@@ -13,5 +13,27 @@ class Report < ApplicationRecord
     end
     result
   end
+
+  def self.to_excel_file(filename = nil)
+    p = Axlsx::Package.new
+    wb = p.workbook
+    filename = Date.yesterday.strftime('%Y%m%d') if filename.nil?
+
+    wb.add_worksheet(name: '중복 제거') do |sheet|
+      sheet.add_row ['URL', '신고 수']
+      self.arrange.each do |data|
+        sheet.add_row [data[:url], data[:count]]
+      end
+    end
+
+    wb.add_worksheet(name: '전체') do |sheet|
+      sheet.add_row %w[URL 설명]
+      self.all.each do |data|
+        sheet.add_row [data.url, data.description]
+      end
+    end
+
+    p.serialize "#{ filename }.xlsx"
+  end
   
 end
