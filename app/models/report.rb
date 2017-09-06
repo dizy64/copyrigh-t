@@ -8,7 +8,7 @@ class Report < ApplicationRecord
 
   def self.arrange
     result = []
-    self.pluck(:url).each do |u|
+    self.pluck(:url).uniq.each do |u|
       result << { url: u, count: self.where("url LIKE '#{ u.split('&').first }%'").count }
     end
     result
