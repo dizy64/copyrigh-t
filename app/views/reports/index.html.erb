@@ -24,7 +24,8 @@
   </p>
   <% if @total_count > 0 %>
   <p class="counter">
-    현재 <span class="count"><span id="count" data-number="<%= @total_count %>"><%= @total_count %></span>건</span>의 신고가 접수되었습니다.
+    지금까지 <span class="count"><span id="total_count"><%= @total_count %></span>건</span>의 신고가 접수되었습니다.<br/>
+    오늘 접수된 신고는 <span class="count"><span id="today_count"><%= @today_count %></span>건</span> 입니다.
   </p>
   <% end %>
 </div>
@@ -33,9 +34,15 @@
 
 <script>
     var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
-    $('#count').animateNumber(
+    $('#total_count').animateNumber(
         {
             number: <%= @total_count %>,
+            numberStep: comma_separator_number_step
+        }
+    );
+    $('#today_count').animateNumber(
+        {
+            number: <%= @today_count %>,
             numberStep: comma_separator_number_step
         }
     );
