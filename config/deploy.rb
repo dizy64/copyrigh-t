@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock "3.9.0"
+lock "3.10.2"
 
 # Change these
 server '13.124.23.238', roles: [:web, :app, :db], primary: true
