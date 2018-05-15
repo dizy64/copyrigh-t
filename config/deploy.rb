@@ -4,7 +4,7 @@ lock "3.10.2"
 # Change these
 server '13.124.23.238', roles: [:web, :app, :db], primary: true
 
-set :rbenv_ruby,      '2.4.1'
+set :rbenv_ruby,      '2.5.0'
 set :repo_url,        'git@github.com:dizy64/copyrigh-t.git'
 set :application,     'copyright'
 set :user,            'ubuntu'
