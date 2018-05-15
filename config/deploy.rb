@@ -2,12 +2,12 @@
 lock "3.9.0"
 
 # Change these
-server 'copyright.withtaiji.com', roles: [:web, :app, :db], primary: true
+server '13.124.23.238', roles: [:web, :app, :db], primary: true
 
 set :rbenv_ruby,      '2.4.1'
 set :repo_url,        'git@github.com:dizy64/copyrigh-t.git'
 set :application,     'copyright'
-set :user,            'zero'
+set :user,            'ubuntu'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
